@@ -1,0 +1,69 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Устанавливаем высоту для body и html */
+}
+.column {
+    float: left;
+    width: 33.33%;
+    height: 100vh; 
+    padding: 10px;
+    box-sizing: border-box; /* Учитываем padding в ширине */
+    background-color: #070707f6; /* Цвет фона для визуализации колонок */
+}
+.column:not(:last-child) {
+    border-right: 1px solid #ccc; /* Граница справа от всех колонок, кроме последней */
+}
+#leftside {
+    position: relative; /* Устанавливаем для позиционирования дочерних элементов */
+}
+
+.navigation-list {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
+
+.navigation-item {
+    list-style-type: none;
+    margin: 2px 0; /* Отступы между элементами списка */
+}
+
+.navigation-item-link {
+    display: block; /* Делаем ссылку блочным элементом */
+    height: auto; /* Высота ссылки автоматически подстраивается под содержимое */
+    width: 100%; /* Ширина ссылки равна ширине колонки */
+    background-color: rgba(58, 58, 58, 0.425); /* Цвет фона для ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: rgba(255, 255, 255, 0.445); /* Цвет текста */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.item-link-text {
+    display: block; /* Делаем текст блочным элементом для центрирования */
+    padding: 8px 15px; /* Задаем отступы */
+    text-align: center; /* Центрируем текст */
+    white-space: normal; /* Позволяем переносить текст на новую строку */
+    overflow: hidden; /* Скрываем переполнение */
+    text-overflow: ellipsis; /* Добавляем многоточие, если текст не помещается */
+}
+
+.inner:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #070707da;
+    color: rgba(255, 255, 255, 0.445);
+}
+
+.footer {
+    text-align: center;
+    padding: 70px;
+    background-color: #070707da;
+    color: rgba(255, 255, 255, 0.445);
+    clear: both; 
+}
